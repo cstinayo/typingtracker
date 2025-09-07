@@ -3,7 +3,18 @@
     "name": "Reading time",
     "version": "1.0",
     "description": "Tracking WPM in Google docs using Docs API",
-   
+    "permissions":["identity", "storage"],
+    "oauth2":{
+        "client_id":"994345302590-1qb33t6firh0d35tld54ifqs2qjfi69c.apps.googleusercontent.com",
+        "scopes":["https://www.googleapis.com/auth/documents.readonly"]
+    },
+    "background":{
+        "service_worker":"content.js"
+    },
+    "action":{
+        "default_popup":"index.html"
+    },
+
     "icons": {
         "16": "assets/tt.jpg",
         "32": "assets/tt.jpg",
@@ -11,3 +22,5 @@
         "128": "assets/tt.jpg"
       }
 }
+
+
